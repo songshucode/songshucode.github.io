@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+<link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
+  <meta name="description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta name="keywords" content="install,Vim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim-cmd">
+<meta property="og:url" content="http://yoursite.com/2019/06/08/vim-cmd/index.html">
+<meta property="og:site_name" content="Songshu">
+<meta property="og:description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-10T05:10:15.716Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vim-cmd">
+<meta name="twitter:description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/06/08/vim-cmd/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>vim-cmd | Songshu</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Songshu</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/08/vim-cmd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Songshu Zhu">
+      <meta itemprop="description" content="生活总是属于那些热爱它的人">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Songshu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">vim-cmd
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-08 20:59:28" itemprop="dateCreated datePublished" datetime="2019-06-08T20:59:28+08:00">2019-06-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-10 13:10:15" itemprop="dateModified" datetime="2019-06-10T13:10:15+08:00">2019-06-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><code>Vim</code>install and operation, <code>plugin</code> install<br>
+<strong>note:</strong> I can’t do it on win10. YouCompleteMe plugin can’t be installed</p>
+<a id="more"></a>
+<h1 id="installation"><a class="markdownIt-Anchor" href="#installation"></a> installation</h1>
+<ol>
+<li>Download the file for the <a href="https://github.com/vim/vim-win32-installer" target="_blank" rel="noopener">website</a></li>
+<li>install it by the default option.</li>
+<li>add the file path to the environment path.</li>
+</ol>
+<h1 id="set-the-setting-file-vimrc"><a class="markdownIt-Anchor" href="#set-the-setting-file-vimrc"></a> set the setting file <code>.vimrc</code></h1>
+<p>you can find the file on the user folder <code>C:\Users\xxx</code>, and the corresponding plugein file is <code>vimfiles</code></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" simple setting</span></span><br><span class="line"><span class="keyword">set</span> nocompatible   <span class="comment">" be iMproved, required</span></span><br><span class="line"><span class="keyword">let</span> $LANG = <span class="string">'en'</span>   <span class="comment">" set message language</span></span><br><span class="line"><span class="keyword">set</span> langmenu=<span class="keyword">en</span>    <span class="comment">" set menu's language of gvim. no spaces beside '='</span></span><br><span class="line"><span class="keyword">filetype</span> off       <span class="comment">" required</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span>         <span class="comment">" show line number</span></span><br><span class="line"><span class="keyword">set</span> nowrap         <span class="comment">" don't auto fold code lines</span></span><br><span class="line"><span class="keyword">set</span> showmatch      <span class="comment">" show matching parentheses</span></span><br><span class="line"><span class="keyword">set</span> scrolloff=<span class="number">3</span>    <span class="comment">" three lines from the top and bottom</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> hlsearch       <span class="comment">" search highlight</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>          <span class="comment">" syntax highlight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">au</span> BufNewFile,BufRead *.<span class="keyword">py</span></span><br><span class="line">\ <span class="keyword">set</span> tabstop=<span class="number">4</span>         <span class="comment">" tab width</span></span><br><span class="line">\ <span class="keyword">set</span> softtabstop=<span class="number">4</span> </span><br><span class="line">\ <span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>  </span><br><span class="line">\ <span class="keyword">set</span> textwidth=<span class="number">79</span>      <span class="comment">" the line max width</span></span><br><span class="line">\ <span class="keyword">set</span> expandtab         <span class="comment">" tab replace the space</span></span><br><span class="line">\ <span class="keyword">set</span> autoindent        <span class="comment">" auto indent</span></span><br><span class="line">\ <span class="keyword">set</span> fileformat=unix   <span class="comment">" the file format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" set code fold</span></span><br><span class="line"><span class="keyword">set</span> foldmethod=<span class="built_in">indent</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">foldlevel</span>=<span class="number">99</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" shortcut mapping</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-J&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-J&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-K&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-K&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-L&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-L&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-H&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-H&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" run python code</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F5&gt;</span> :<span class="keyword">call</span> RunPython()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line">func! RunPython()</span><br><span class="line">    exec <span class="string">"W"</span></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">'python'</span></span><br><span class="line">        exec <span class="string">"!python %"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" place the plugin in here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>    <span class="comment">" required</span></span><br><span class="line"><span class="comment">" Brief help</span></span><br><span class="line"><span class="comment">" :PluginList       - lists configured plugins</span></span><br><span class="line"><span class="comment">" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</span></span><br><span class="line"><span class="comment">" :PluginSearch foo - searches for foo; append `!` to refresh local cache</span></span><br><span class="line"><span class="comment">" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span></span><br><span class="line"><span class="comment">"</span></span><br><span class="line"><span class="comment">" see :h vundle for more details or wiki for FAQ</span></span><br><span class="line"><span class="comment">" Put your non-Plugin stuff after this line</span></span><br></pre></td></tr></table></figure>
+<h1 id="install-plugin"><a class="markdownIt-Anchor" href="#install-plugin"></a> install Plugin</h1>
+<p>c## Vundle</p>
+<ol>
+<li>download the plugin</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>add the following setting code to the <code>.vimrc</code></li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>using</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'plugin name'</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>command</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:BundleList       - lists configured plugins</span><br><span class="line">:BundleInstall    - installs plugins; append `!` to update or just :BundleUpdate</span><br><span class="line">:BundleSearch foo - searches for foo; append `!` to refresh local cache</span><br><span class="line">:BundleClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span><br></pre></td></tr></table></figure>
+<h2 id="youcompleteme"><a class="markdownIt-Anchor" href="#youcompleteme"></a> YouCompleteMe</h2>
+<ol>
+<li>support language</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C、Objectiv-c、C<span class="comment">#、C++、Objectiv-C++、Php、Javascript、Typescript、python、Go、Rust</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>install</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'Valloric/YouCompleteMe'</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>compile the plugin</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">./install.py --clang-completer</span><br></pre></td></tr></table></figure>
+<h2 id="taglist"><a class="markdownIt-Anchor" href="#taglist"></a> Taglist</h2>
+<p>It is a plugin to jump between code</p>
+<ol>
+<li>
+<p>download the <a href="http://ctags.sourceforge.net" target="_blank" rel="noopener">ctags</a></p>
+</li>
+<li>
+<p>unzip the ctags file to get <code>ctags.exe</code></p>
+</li>
+<li>
+<p>copy <code>ctags.exe</code> to the <code>vim.exe</code> installation file</p>
+</li>
+<li>
+<p>add the following code to the <code>.vimrc</code></p>
+ <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set tags=tags;</span><br><span class="line"><span class="keyword">set</span> autochdir</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>install Taglist<br>
+add the following code to <code>.vimrc</code></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Bundle &apos;taglist.vim&apos;</span><br><span class="line">let Tlist_Ctags_Cmd=&apos;ctags&apos;</span><br><span class="line">let Tlist_Show_One_File=1</span><br><span class="line">let Tlist_WinWidt =28</span><br><span class="line">let Tlist_Exit_OnlyWindow=1</span><br><span class="line">let Tlist_Use_Left_Windo =1</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="nerdtree"><a class="markdownIt-Anchor" href="#nerdtree"></a> NERDTree</h2>
+<p>add the following code to <code>.vimrc</code></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'scrooloose/nerdtree'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinPos=<span class="string">'left'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinSize=<span class="number">30</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">0</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F2&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></table></figure>
+<p>and this to the top of <code>.vimrc</code> to ignore some error</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> termencoding=utf-<span class="number">8</span></span><br><span class="line"><span class="keyword">set</span> fileencoding=chinese</span><br><span class="line"><span class="keyword">set</span> fileencodings=ucs-bom,utf-<span class="number">8</span>,chinese</span><br></pre></td></tr></table></figure>
+<h1 id="error-meeting-in-the-installation-process"><a class="markdownIt-Anchor" href="#error-meeting-in-the-installation-process"></a> Error meeting in the installation process</h1>
+<ol>
+<li>Please input Enter or other key to continue<br>
+This is beause there is some thing wrong in the setting file <code>.vimrc</code>. fix it, and there will be fine.</li>
+<li></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/install/" rel="tag"># install</a>
+          
+            <a href="/tags/Vim/" rel="tag"># Vim</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/08/lua-cmd/" rel="next" title="lua-cmd">
+                <i class="fa fa-chevron-left"></i> lua-cmd
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Songshu Zhu</p>
+              <div class="site-description motion-element" itemprop="description">生活总是属于那些热爱它的人</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">1.</span> <span class="nav-text"> installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#set-the-setting-file-vimrc"><span class="nav-number">2.</span> <span class="nav-text"> set the setting file .vimrc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#install-plugin"><span class="nav-number">3.</span> <span class="nav-text"> install Plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#youcompleteme"><span class="nav-number">3.1.</span> <span class="nav-text"> YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#taglist"><span class="nav-number">3.2.</span> <span class="nav-text"> Taglist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nerdtree"><span class="nav-number">3.3.</span> <span class="nav-text"> NERDTree</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#error-meeting-in-the-installation-process"><span class="nav-number">4.</span> <span class="nav-text"> Error meeting in the installation process</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Songshu Zhu</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
