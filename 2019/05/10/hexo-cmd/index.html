@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Songshu">
 <meta property="og:description" content="hexo 使用的常用命令，初始化，建立新章节，添加新的属性，生成静态文件，发布">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-04T09:11:10.194Z">
+<meta property="og:updated_time" content="2019-06-18T13:03:18.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 命令">
 <meta name="twitter:description" content="hexo 使用的常用命令，初始化，建立新章节，添加新的属性，生成静态文件，发布">
@@ -402,7 +402,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-04 17:11:10" itemprop="dateModified" datetime="2019-06-04T17:11:10+08:00">2019-06-04</time>
+                <time title="修改时间：2019-06-18 21:03:18" itemprop="dateModified" datetime="2019-06-18T21:03:18+08:00">2019-06-18</time>
               
             
           </span>
@@ -465,7 +465,13 @@
 <p>新建一个网站，使用folder制定文件夹，默认为当前文件夹。</p>
 <h2 id="new"><a class="markdownIt-Anchor" href="#new"></a> new</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<p>新建一片文章，如果没有设置layout则默认使用_config.yml中的default_layout参数。如果标题中使用空格，需要使用引号括起来</p>
+<p>新建一篇文章，如果没有设置layout则默认使用_config.yml中的default_layout参数。如果标题中使用空格，需要使用引号括起来</p>
+<h2 id="draft"><a class="markdownIt-Anchor" href="#draft"></a> draft</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇草稿，草稿并不会被更新到服务器端的个人博客中，会在本地文件夹<code>source\_drafts</code>中新建一个md文件</p>
+<h2 id="publish"><a class="markdownIt-Anchor" href="#publish"></a> publish</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<p>公布草稿为博客</p>
 <h2 id="page"><a class="markdownIt-Anchor" href="#page"></a> page</h2>
 <p>为博客添加新的属性（tag,…）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
@@ -494,32 +500,36 @@
 </table>
 <h2 id="server"><a class="markdownIt-Anchor" href="#server"></a> server</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>启动服务器</p>
+<p>启动服务器，本地查看</p>
 <table>
 <thead>
 <tr>
-<th>选项</th>
+<th style="text-align:center">选项</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-P</td>
+<td style="text-align:center">-P</td>
 <td>重设端口</td>
 </tr>
 <tr>
-<td>-s</td>
+<td style="text-align:center">-s</td>
 <td>只是用静态文件</td>
 </tr>
 <tr>
-<td>-l</td>
+<td style="text-align:center">-l</td>
 <td>启动日记记录，使用覆盖记录格式</td>
+</tr>
+<tr>
+<td style="text-align:center">–drafts</td>
+<td>查看草稿</td>
 </tr>
 </tbody>
 </table>
 <h2 id="deploy"><a class="markdownIt-Anchor" href="#deploy"></a> deploy</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-<p>部署网站</p>
+<p>部署网站到远端服务器</p>
 <table>
 <thead>
 <tr>
@@ -546,6 +556,16 @@
 <p>在终端显示调试信息并记录到debug.log文件中。</p>
 <h2 id="生成并发布"><a class="markdownIt-Anchor" href="#生成并发布"></a> 生成并发布</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+<h1 id="error"><a class="markdownIt-Anchor" href="#error"></a> Error</h1>
+<ol>
+<li>Error: Spawn failed
+<ul>
+<li>check the ssh key</li>
+<li>check the ssr</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
 
@@ -660,7 +680,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -705,7 +725,21 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -743,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#inistall"><span class="nav-number">1.</span> <span class="nav-text"> inistall</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-install"><span class="nav-number">1.1.</span> <span class="nav-text"> git install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-install"><span class="nav-number">1.2.</span> <span class="nav-text"> node.js install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-install"><span class="nav-number">1.3.</span> <span class="nav-text"> hexo install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setting-ssh-key-for-git"><span class="nav-number">1.4.</span> <span class="nav-text"> setting ssh key for git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#asssociating-blog-and-github"><span class="nav-number">1.5.</span> <span class="nav-text"> asssociating blog and github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#operation"><span class="nav-number">2.</span> <span class="nav-text"> operation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-number">2.1.</span> <span class="nav-text"> init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new"><span class="nav-number">2.2.</span> <span class="nav-text"> new</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#page"><span class="nav-number">2.3.</span> <span class="nav-text"> page</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate"><span class="nav-number">2.4.</span> <span class="nav-text"> generate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#server"><span class="nav-number">2.5.</span> <span class="nav-text"> server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy"><span class="nav-number">2.6.</span> <span class="nav-text"> deploy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clean"><span class="nav-number">2.7.</span> <span class="nav-text"> clean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">2.8.</span> <span class="nav-text"> list</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试模式"><span class="nav-number">2.9.</span> <span class="nav-text"> 调试模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成并发布"><span class="nav-number">2.10.</span> <span class="nav-text"> 生成并发布</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#inistall"><span class="nav-number">1.</span> <span class="nav-text"> inistall</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-install"><span class="nav-number">1.1.</span> <span class="nav-text"> git install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nodejs-install"><span class="nav-number">1.2.</span> <span class="nav-text"> node.js install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-install"><span class="nav-number">1.3.</span> <span class="nav-text"> hexo install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setting-ssh-key-for-git"><span class="nav-number">1.4.</span> <span class="nav-text"> setting ssh key for git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#asssociating-blog-and-github"><span class="nav-number">1.5.</span> <span class="nav-text"> asssociating blog and github</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#operation"><span class="nav-number">2.</span> <span class="nav-text"> operation</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-number">2.1.</span> <span class="nav-text"> init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#new"><span class="nav-number">2.2.</span> <span class="nav-text"> new</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#draft"><span class="nav-number">2.3.</span> <span class="nav-text"> draft</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#publish"><span class="nav-number">2.4.</span> <span class="nav-text"> publish</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#page"><span class="nav-number">2.5.</span> <span class="nav-text"> page</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate"><span class="nav-number">2.6.</span> <span class="nav-text"> generate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#server"><span class="nav-number">2.7.</span> <span class="nav-text"> server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy"><span class="nav-number">2.8.</span> <span class="nav-text"> deploy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clean"><span class="nav-number">2.9.</span> <span class="nav-text"> clean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list"><span class="nav-number">2.10.</span> <span class="nav-text"> list</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试模式"><span class="nav-number">2.11.</span> <span class="nav-text"> 调试模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成并发布"><span class="nav-number">2.12.</span> <span class="nav-text"> 生成并发布</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#error"><span class="nav-number">3.</span> <span class="nav-text"> Error</span></a></li></ol></div>
             
 
           </div>
