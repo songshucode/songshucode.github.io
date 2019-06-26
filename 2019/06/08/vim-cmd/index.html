@@ -15,7 +15,7 @@
 
 
 <html class="theme-next gemini use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -97,20 +97,22 @@
 
 
 <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-  <meta name="description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+  <meta name="description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
 <meta name="keywords" content="install,Vim">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vim-cmd">
 <meta property="og:url" content="http://yoursite.com/2019/06/08/vim-cmd/index.html">
 <meta property="og:site_name" content="Songshu">
-<meta property="og:description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta property="og:description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-06-10T05:10:15.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vim-cmd">
-<meta name="twitter:description" content="Viminstall and operation, plugin install note: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta name="twitter:description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
 
 
+
+  <link rel="alternate" href="/atom.xml" title="Songshu" type="application/atom+xml">
 
 
 
@@ -296,11 +298,40 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -436,80 +467,55 @@
       
 
       
-        <p><code>Vim</code>install and operation, <code>plugin</code> install<br>
-<strong>note:</strong> I can’t do it on win10. YouCompleteMe plugin can’t be installed</p>
-<a id="more"></a>
-<h1 id="installation"><a class="markdownIt-Anchor" href="#installation"></a> installation</h1>
-<ol>
+        <p><code>Vim</code>install and operation, <code>plugin</code> install<br><strong>note:</strong> I can’t do it on win10. YouCompleteMe plugin can’t be installed<br><a id="more"></a></p>
+<h1 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h1><ol>
 <li>Download the file for the <a href="https://github.com/vim/vim-win32-installer" target="_blank" rel="noopener">website</a></li>
 <li>install it by the default option.</li>
-<li>add the file path to the environment path.</li>
+<li>add the file path to the environment path.<h1 id="set-the-setting-file-vimrc"><a href="#set-the-setting-file-vimrc" class="headerlink" title="set the setting file .vimrc"></a>set the setting file <code>.vimrc</code></h1>you can find the file on the user folder <code>C:\Users\xxx</code>, and the corresponding plugein file is <code>vimfiles</code><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" simple setting</span></span><br><span class="line"><span class="keyword">set</span> nocompatible   <span class="comment">" be iMproved, required</span></span><br><span class="line"><span class="keyword">let</span> $LANG = <span class="string">'en'</span>   <span class="comment">" set message language</span></span><br><span class="line"><span class="keyword">set</span> langmenu=<span class="keyword">en</span>    <span class="comment">" set menu's language of gvim. no spaces beside '='</span></span><br><span class="line"><span class="keyword">filetype</span> off       <span class="comment">" required</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span>         <span class="comment">" show line number</span></span><br><span class="line"><span class="keyword">set</span> nowrap         <span class="comment">" don't auto fold code lines</span></span><br><span class="line"><span class="keyword">set</span> showmatch      <span class="comment">" show matching parentheses</span></span><br><span class="line"><span class="keyword">set</span> scrolloff=<span class="number">3</span>    <span class="comment">" three lines from the top and bottom</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> hlsearch       <span class="comment">" search highlight</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>          <span class="comment">" syntax highlight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">au</span> BufNewFile,BufRead *.<span class="keyword">py</span></span><br><span class="line">\ <span class="keyword">set</span> tabstop=<span class="number">4</span>         <span class="comment">" tab width</span></span><br><span class="line">\ <span class="keyword">set</span> softtabstop=<span class="number">4</span> </span><br><span class="line">\ <span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>  </span><br><span class="line">\ <span class="keyword">set</span> textwidth=<span class="number">79</span>      <span class="comment">" the line max width</span></span><br><span class="line">\ <span class="keyword">set</span> expandtab         <span class="comment">" tab replace the space</span></span><br><span class="line">\ <span class="keyword">set</span> autoindent        <span class="comment">" auto indent</span></span><br><span class="line">\ <span class="keyword">set</span> fileformat=unix   <span class="comment">" the file format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" set code fold</span></span><br><span class="line"><span class="keyword">set</span> foldmethod=<span class="built_in">indent</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">foldlevel</span>=<span class="number">99</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" shortcut mapping</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-J&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-J&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-K&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-K&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-L&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-L&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-H&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-H&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" run python code</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F5&gt;</span> :<span class="keyword">call</span> RunPython()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line">func! RunPython()</span><br><span class="line">    exec <span class="string">"W"</span></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">'python'</span></span><br><span class="line">        exec <span class="string">"!python %"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" place the plugin in here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>    <span class="comment">" required</span></span><br><span class="line"><span class="comment">" Brief help</span></span><br><span class="line"><span class="comment">" :PluginList       - lists configured plugins</span></span><br><span class="line"><span class="comment">" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</span></span><br><span class="line"><span class="comment">" :PluginSearch foo - searches for foo; append `!` to refresh local cache</span></span><br><span class="line"><span class="comment">" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span></span><br><span class="line"><span class="comment">"</span></span><br><span class="line"><span class="comment">" see :h vundle for more details or wiki for FAQ</span></span><br><span class="line"><span class="comment">" Put your non-Plugin stuff after this line</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<h1 id="set-the-setting-file-vimrc"><a class="markdownIt-Anchor" href="#set-the-setting-file-vimrc"></a> set the setting file <code>.vimrc</code></h1>
-<p>you can find the file on the user folder <code>C:\Users\xxx</code>, and the corresponding plugein file is <code>vimfiles</code></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" simple setting</span></span><br><span class="line"><span class="keyword">set</span> nocompatible   <span class="comment">" be iMproved, required</span></span><br><span class="line"><span class="keyword">let</span> $LANG = <span class="string">'en'</span>   <span class="comment">" set message language</span></span><br><span class="line"><span class="keyword">set</span> langmenu=<span class="keyword">en</span>    <span class="comment">" set menu's language of gvim. no spaces beside '='</span></span><br><span class="line"><span class="keyword">filetype</span> off       <span class="comment">" required</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span>         <span class="comment">" show line number</span></span><br><span class="line"><span class="keyword">set</span> nowrap         <span class="comment">" don't auto fold code lines</span></span><br><span class="line"><span class="keyword">set</span> showmatch      <span class="comment">" show matching parentheses</span></span><br><span class="line"><span class="keyword">set</span> scrolloff=<span class="number">3</span>    <span class="comment">" three lines from the top and bottom</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> hlsearch       <span class="comment">" search highlight</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>          <span class="comment">" syntax highlight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">au</span> BufNewFile,BufRead *.<span class="keyword">py</span></span><br><span class="line">\ <span class="keyword">set</span> tabstop=<span class="number">4</span>         <span class="comment">" tab width</span></span><br><span class="line">\ <span class="keyword">set</span> softtabstop=<span class="number">4</span> </span><br><span class="line">\ <span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>  </span><br><span class="line">\ <span class="keyword">set</span> textwidth=<span class="number">79</span>      <span class="comment">" the line max width</span></span><br><span class="line">\ <span class="keyword">set</span> expandtab         <span class="comment">" tab replace the space</span></span><br><span class="line">\ <span class="keyword">set</span> autoindent        <span class="comment">" auto indent</span></span><br><span class="line">\ <span class="keyword">set</span> fileformat=unix   <span class="comment">" the file format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" set code fold</span></span><br><span class="line"><span class="keyword">set</span> foldmethod=<span class="built_in">indent</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">foldlevel</span>=<span class="number">99</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" shortcut mapping</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-J&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-J&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-K&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-K&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-L&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-L&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-H&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-H&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" run python code</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F5&gt;</span> :<span class="keyword">call</span> RunPython()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line">func! RunPython()</span><br><span class="line">    exec <span class="string">"W"</span></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">'python'</span></span><br><span class="line">        exec <span class="string">"!python %"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" place the plugin in here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>    <span class="comment">" required</span></span><br><span class="line"><span class="comment">" Brief help</span></span><br><span class="line"><span class="comment">" :PluginList       - lists configured plugins</span></span><br><span class="line"><span class="comment">" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</span></span><br><span class="line"><span class="comment">" :PluginSearch foo - searches for foo; append `!` to refresh local cache</span></span><br><span class="line"><span class="comment">" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span></span><br><span class="line"><span class="comment">"</span></span><br><span class="line"><span class="comment">" see :h vundle for more details or wiki for FAQ</span></span><br><span class="line"><span class="comment">" Put your non-Plugin stuff after this line</span></span><br></pre></td></tr></table></figure>
-<h1 id="install-plugin"><a class="markdownIt-Anchor" href="#install-plugin"></a> install Plugin</h1>
-<p>c## Vundle</p>
+<h1 id="install-Plugin"><a href="#install-Plugin" class="headerlink" title="install Plugin"></a>install Plugin</h1><p>c## Vundle</p>
 <ol>
-<li>download the plugin</li>
-</ol>
+<li><p>download the plugin</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>add the following setting code to the <code>.vimrc</code></li>
-</ol>
+</li>
+<li><p>add the following setting code to the <code>.vimrc</code></p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>using</li>
-</ol>
+</li>
+<li><p>using</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'plugin name'</span></span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>command</li>
-</ol>
+</li>
+<li><p>command</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:BundleList       - lists configured plugins</span><br><span class="line">:BundleInstall    - installs plugins; append `!` to update or just :BundleUpdate</span><br><span class="line">:BundleSearch foo - searches for foo; append `!` to refresh local cache</span><br><span class="line">:BundleClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span><br></pre></td></tr></table></figure>
-<h2 id="youcompleteme"><a class="markdownIt-Anchor" href="#youcompleteme"></a> YouCompleteMe</h2>
-<ol>
-<li>support language</li>
+</li>
 </ol>
+<h2 id="YouCompleteMe"><a href="#YouCompleteMe" class="headerlink" title="YouCompleteMe"></a>YouCompleteMe</h2><ol>
+<li><p>support language</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C、Objectiv-c、C<span class="comment">#、C++、Objectiv-C++、Php、Javascript、Typescript、python、Go、Rust</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>install</li>
-</ol>
+</li>
+<li><p>install</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'Valloric/YouCompleteMe'</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>compile the plugin</li>
-</ol>
+</li>
+<li><p>compile the plugin</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">./install.py --clang-completer</span><br></pre></td></tr></table></figure>
-<h2 id="taglist"><a class="markdownIt-Anchor" href="#taglist"></a> Taglist</h2>
-<p>It is a plugin to jump between code</p>
+</li>
+</ol>
+<h2 id="Taglist"><a href="#Taglist" class="headerlink" title="Taglist"></a>Taglist</h2><p>It is a plugin to jump between code</p>
 <ol>
-<li>
-<p>download the <a href="http://ctags.sourceforge.net" target="_blank" rel="noopener">ctags</a></p>
-</li>
-<li>
-<p>unzip the ctags file to get <code>ctags.exe</code></p>
-</li>
-<li>
-<p>copy <code>ctags.exe</code> to the <code>vim.exe</code> installation file</p>
-</li>
-<li>
-<p>add the following code to the <code>.vimrc</code></p>
+<li>download the <a href="http://ctags.sourceforge.net" target="_blank" rel="noopener">ctags</a></li>
+<li>unzip the ctags file to get <code>ctags.exe</code></li>
+<li>copy <code>ctags.exe</code> to the <code>vim.exe</code> installation file</li>
+<li><p>add the following code to the <code>.vimrc</code></p>
  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set tags=tags;</span><br><span class="line"><span class="keyword">set</span> autochdir</span><br></pre></td></tr></table></figure>
 </li>
-<li>
-<p>install Taglist<br>
-add the following code to <code>.vimrc</code></p>
+<li><p>install Taglist<br>add the following code to <code>.vimrc</code></p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Bundle &apos;taglist.vim&apos;</span><br><span class="line">let Tlist_Ctags_Cmd=&apos;ctags&apos;</span><br><span class="line">let Tlist_Show_One_File=1</span><br><span class="line">let Tlist_WinWidt =28</span><br><span class="line">let Tlist_Exit_OnlyWindow=1</span><br><span class="line">let Tlist_Use_Left_Windo =1</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="nerdtree"><a class="markdownIt-Anchor" href="#nerdtree"></a> NERDTree</h2>
-<p>add the following code to <code>.vimrc</code></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'scrooloose/nerdtree'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinPos=<span class="string">'left'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinSize=<span class="number">30</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">0</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F2&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></table></figure>
-<p>and this to the top of <code>.vimrc</code> to ignore some error</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> termencoding=utf-<span class="number">8</span></span><br><span class="line"><span class="keyword">set</span> fileencoding=chinese</span><br><span class="line"><span class="keyword">set</span> fileencodings=ucs-bom,utf-<span class="number">8</span>,chinese</span><br></pre></td></tr></table></figure>
-<h1 id="error-meeting-in-the-installation-process"><a class="markdownIt-Anchor" href="#error-meeting-in-the-installation-process"></a> Error meeting in the installation process</h1>
-<ol>
-<li>Please input Enter or other key to continue<br>
-This is beause there is some thing wrong in the setting file <code>.vimrc</code>. fix it, and there will be fine.</li>
+<h2 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h2><p>add the following code to <code>.vimrc</code><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'scrooloose/nerdtree'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinPos=<span class="string">'left'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinSize=<span class="number">30</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">0</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F2&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>and this to the top of <code>.vimrc</code> to ignore some error<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> termencoding=utf-<span class="number">8</span></span><br><span class="line"><span class="keyword">set</span> fileencoding=chinese</span><br><span class="line"><span class="keyword">set</span> fileencodings=ucs-bom,utf-<span class="number">8</span>,chinese</span><br></pre></td></tr></table></figure></p>
+<h1 id="Error-meeting-in-the-installation-process"><a href="#Error-meeting-in-the-installation-process" class="headerlink" title="Error meeting in the installation process"></a>Error meeting in the installation process</h1><ol>
+<li>Please input Enter or other key to continue<br>This is beause there is some thing wrong in the setting file <code>.vimrc</code>. fix it, and there will be fine.</li>
 <li></li>
 </ol>
 
@@ -631,7 +637,7 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -690,7 +696,15 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -698,6 +712,13 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
             </nav>
           
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -728,7 +749,7 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">1.</span> <span class="nav-text"> installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#set-the-setting-file-vimrc"><span class="nav-number">2.</span> <span class="nav-text"> set the setting file .vimrc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#install-plugin"><span class="nav-number">3.</span> <span class="nav-text"> install Plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#youcompleteme"><span class="nav-number">3.1.</span> <span class="nav-text"> YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#taglist"><span class="nav-number">3.2.</span> <span class="nav-text"> Taglist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nerdtree"><span class="nav-number">3.3.</span> <span class="nav-text"> NERDTree</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#error-meeting-in-the-installation-process"><span class="nav-number">4.</span> <span class="nav-text"> Error meeting in the installation process</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">1.</span> <span class="nav-text">installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#set-the-setting-file-vimrc"><span class="nav-number">2.</span> <span class="nav-text">set the setting file .vimrc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#install-Plugin"><span class="nav-number">3.</span> <span class="nav-text">install Plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YouCompleteMe"><span class="nav-number">3.1.</span> <span class="nav-text">YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taglist"><span class="nav-number">3.2.</span> <span class="nav-text">Taglist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NERDTree"><span class="nav-number">3.3.</span> <span class="nav-text">NERDTree</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-meeting-in-the-installation-process"><span class="nav-number">4.</span> <span class="nav-text">Error meeting in the installation process</span></a></li></ol></div>
             
 
           </div>
@@ -761,7 +782,7 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
@@ -873,7 +894,7 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
   
 
 
-  <script src="/js/next-boot.js?v=7.1.1"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script src="/js/next-boot.js?v=7.1.1"></script>
 
 
   
@@ -889,6 +910,326 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
 
 
@@ -898,6 +1239,13 @@ This is beause there is some thing wrong in the setting file <code>.vimrc</code>
   
 
   
+  
+
+  
+  
+
+  
+
 
   
 
