@@ -11,10 +11,8 @@
 
 
 
-  
 
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next gemini" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +77,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -97,18 +95,18 @@
 
 
 <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-  <meta name="description" content="Luainstall">
-<meta name="keywords" content="Lua,install">
+  <meta name="description" content="install Lua">
+<meta name="keywords" content="install,Lua">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lua-cmd">
-<meta property="og:url" content="http://yoursite.com/2019/06/08/lua-cmd/index.html">
+<meta property="og:url" content="http://192.168.0.186/2019/06/08/lua-cmd/index.html">
 <meta property="og:site_name" content="Songshu">
-<meta property="og:description" content="Luainstall">
+<meta property="og:description" content="install Lua">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-09T05:14:26.526Z">
+<meta property="og:updated_time" content="2019-07-10T12:08:52.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lua-cmd">
-<meta name="twitter:description" content="Luainstall">
+<meta name="twitter:description" content="install Lua">
 
 
 
@@ -118,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/08/lua-cmd/">
+  <link rel="canonical" href="http://192.168.0.186/2019/06/08/lua-cmd/">
 
 
 
@@ -373,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/08/lua-cmd/">
+    <link itemprop="mainEntityOfPage" href="http://192.168.0.186/2019/06/08/lua-cmd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Songshu Zhu">
@@ -433,11 +431,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-09 13:14:26" itemprop="dateModified" datetime="2019-06-09T13:14:26+08:00">2019-06-09</time>
+                <time title="修改时间：2019-07-10 20:08:52" itemprop="dateModified" datetime="2019-07-10T20:08:52+08:00">2019-07-10</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/linux/" itemprop="url" rel="index"><span itemprop="name">linux</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -467,15 +483,15 @@
       
 
       
-        <p><code>Lua</code>install<br><a id="more"></a></p>
-<h1 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h1><ol>
+        <p>install Lua<br><a id="more"></a><br><!--finished--></p>
+<h1 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h1><ul>
 <li>Download the binary file <code>lua-5.3.5_Win64_bin.zip</code> form the <a href="http://luabinaries.sourceforge.net/download.html" target="_blank" rel="noopener">offical website</a></li>
 <li><p>Upzip <code>*.zip</code> to get the following file and adjust the file name to the right one</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lua53.exe   --&gt; lua.exe</span><br><span class="line">luac53.exe  --&gt; luac.exe</span><br><span class="line">wlua53.exe  --&gt; wlua.exe</span><br><span class="line">lua53.dll</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lua53.exe   --&gt; lua.exe</span><br><span class="line">luac53.exe  --&gt; luac.exe</span><br><span class="line">wlua53.exe  --&gt; wlua.exe</span><br><span class="line">lua53.dll</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Add the file path to the environment path.</p>
 </li>
-</ol>
+</ul>
 
       
     </div>
@@ -499,9 +515,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Lua/" rel="tag"># Lua</a>
-          
             <a href="/tags/install/" rel="tag"># install</a>
+          
+            <a href="/tags/Lua/" rel="tag"># Lua</a>
           
         </div>
       
@@ -524,8 +540,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/08/vim-cmd/" rel="prev" title="vim-cmd">
-                vim-cmd <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/19/pycharm-remote/" rel="prev" title="pycharm-remote">
+                pycharm-remote <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,12 +611,57 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               
@@ -662,7 +723,35 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -707,7 +796,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">1.</span> <span class="nav-text">installation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-text">installation</span></a></li></ol></div>
             
 
           </div>
@@ -752,6 +841,14 @@
 
 
 
+
+
+  <script src="https://unpkg.com/mermaid@/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
 
         
 
@@ -1186,7 +1283,7 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1208,6 +1305,26 @@
   
 
   
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
   
 

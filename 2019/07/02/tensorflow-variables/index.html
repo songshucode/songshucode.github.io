@@ -11,10 +11,8 @@
 
 
 
-  
 
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next gemini" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +77,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -97,18 +95,18 @@
 
 
 <link href="https://cdn.bootcss.com/KaTeX/0.7.1/katex.min.css" rel="stylesheet">
-  <meta name="description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
-<meta name="keywords" content="install,Vim">
+  <meta name="description" content="variables on the tensorflow, it’s about local, global, model and trainable veriables.">
+<meta name="keywords" content="python,tensorflow,variables">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim-cmd">
-<meta property="og:url" content="http://yoursite.com/2019/06/08/vim-cmd/index.html">
+<meta property="og:title" content="tensorflow-variables">
+<meta property="og:url" content="http://192.168.0.186/2019/07/02/tensorflow-variables/index.html">
 <meta property="og:site_name" content="Songshu">
-<meta property="og:description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta property="og:description" content="variables on the tensorflow, it’s about local, global, model and trainable veriables.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-10T05:10:15.716Z">
+<meta property="og:updated_time" content="2019-07-10T12:09:30.897Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim-cmd">
-<meta name="twitter:description" content="Viminstall and operation, plugin installnote: I can’t do it on win10. YouCompleteMe plugin can’t be installed">
+<meta name="twitter:title" content="tensorflow-variables">
+<meta name="twitter:description" content="variables on the tensorflow, it’s about local, global, model and trainable veriables.">
 
 
 
@@ -118,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/08/vim-cmd/">
+  <link rel="canonical" href="http://192.168.0.186/2019/07/02/tensorflow-variables/">
 
 
 
@@ -128,7 +126,7 @@
   };
 </script>
 
-  <title>vim-cmd | Songshu</title>
+  <title>tensorflow-variables | Songshu</title>
   
 
 
@@ -373,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/08/vim-cmd/">
+    <link itemprop="mainEntityOfPage" href="http://192.168.0.186/2019/07/02/tensorflow-variables/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Songshu Zhu">
@@ -390,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim-cmd
+          <h1 class="post-title" itemprop="name headline">tensorflow-variables
 
               
             
@@ -416,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2019-06-08 20:59:28" itemprop="dateCreated datePublished" datetime="2019-06-08T20:59:28+08:00">2019-06-08</time>
+              <time title="创建时间：2019-07-02 11:26:35" itemprop="dateCreated datePublished" datetime="2019-07-02T11:26:35+08:00">2019-07-02</time>
             
 
             
@@ -433,11 +431,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-10 13:10:15" itemprop="dateModified" datetime="2019-06-10T13:10:15+08:00">2019-06-10</time>
+                <time title="修改时间：2019-07-10 20:09:30" itemprop="dateModified" datetime="2019-07-10T20:09:30+08:00">2019-07-10</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tensorflow/" itemprop="url" rel="index"><span itemprop="name">tensorflow</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -467,57 +483,15 @@
       
 
       
-        <p><code>Vim</code>install and operation, <code>plugin</code> install<br><strong>note:</strong> I can’t do it on win10. YouCompleteMe plugin can’t be installed<br><a id="more"></a></p>
-<h1 id="installation"><a href="#installation" class="headerlink" title="installation"></a>installation</h1><ol>
-<li>Download the file for the <a href="https://github.com/vim/vim-win32-installer" target="_blank" rel="noopener">website</a></li>
-<li>install it by the default option.</li>
-<li>add the file path to the environment path.<h1 id="set-the-setting-file-vimrc"><a href="#set-the-setting-file-vimrc" class="headerlink" title="set the setting file .vimrc"></a>set the setting file <code>.vimrc</code></h1>you can find the file on the user folder <code>C:\Users\xxx</code>, and the corresponding plugein file is <code>vimfiles</code><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" simple setting</span></span><br><span class="line"><span class="keyword">set</span> nocompatible   <span class="comment">" be iMproved, required</span></span><br><span class="line"><span class="keyword">let</span> $LANG = <span class="string">'en'</span>   <span class="comment">" set message language</span></span><br><span class="line"><span class="keyword">set</span> langmenu=<span class="keyword">en</span>    <span class="comment">" set menu's language of gvim. no spaces beside '='</span></span><br><span class="line"><span class="keyword">filetype</span> off       <span class="comment">" required</span></span><br><span class="line"><span class="keyword">set</span> <span class="keyword">number</span>         <span class="comment">" show line number</span></span><br><span class="line"><span class="keyword">set</span> nowrap         <span class="comment">" don't auto fold code lines</span></span><br><span class="line"><span class="keyword">set</span> showmatch      <span class="comment">" show matching parentheses</span></span><br><span class="line"><span class="keyword">set</span> scrolloff=<span class="number">3</span>    <span class="comment">" three lines from the top and bottom</span></span><br><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> hlsearch       <span class="comment">" search highlight</span></span><br><span class="line"><span class="keyword">syntax</span> <span class="keyword">on</span>          <span class="comment">" syntax highlight</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">au</span> BufNewFile,BufRead *.<span class="keyword">py</span></span><br><span class="line">\ <span class="keyword">set</span> tabstop=<span class="number">4</span>         <span class="comment">" tab width</span></span><br><span class="line">\ <span class="keyword">set</span> softtabstop=<span class="number">4</span> </span><br><span class="line">\ <span class="keyword">set</span> <span class="built_in">shiftwidth</span>=<span class="number">4</span>  </span><br><span class="line">\ <span class="keyword">set</span> textwidth=<span class="number">79</span>      <span class="comment">" the line max width</span></span><br><span class="line">\ <span class="keyword">set</span> expandtab         <span class="comment">" tab replace the space</span></span><br><span class="line">\ <span class="keyword">set</span> autoindent        <span class="comment">" auto indent</span></span><br><span class="line">\ <span class="keyword">set</span> fileformat=unix   <span class="comment">" the file format</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" set code fold</span></span><br><span class="line"><span class="keyword">set</span> foldmethod=<span class="built_in">indent</span></span><br><span class="line"><span class="keyword">set</span> <span class="built_in">foldlevel</span>=<span class="number">99</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" shortcut mapping</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-J&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-J&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-K&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-K&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-L&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-L&gt;</span></span><br><span class="line"><span class="keyword">nnoremap</span> <span class="symbol">&lt;C-H&gt;</span> <span class="symbol">&lt;C-W&gt;</span><span class="symbol">&lt;C-H&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" run python code</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F5&gt;</span> :<span class="keyword">call</span> RunPython()<span class="symbol">&lt;CR&gt;</span></span><br><span class="line">func! RunPython()</span><br><span class="line">    exec <span class="string">"W"</span></span><br><span class="line">    <span class="keyword">if</span> &amp;<span class="keyword">filetype</span> == <span class="string">'python'</span></span><br><span class="line">        exec <span class="string">"!python %"</span></span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line">endfunc</span><br><span class="line"></span><br><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">" place the plugin in here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">filetype</span> plugin <span class="built_in">indent</span> <span class="keyword">on</span>    <span class="comment">" required</span></span><br><span class="line"><span class="comment">" Brief help</span></span><br><span class="line"><span class="comment">" :PluginList       - lists configured plugins</span></span><br><span class="line"><span class="comment">" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate</span></span><br><span class="line"><span class="comment">" :PluginSearch foo - searches for foo; append `!` to refresh local cache</span></span><br><span class="line"><span class="comment">" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span></span><br><span class="line"><span class="comment">"</span></span><br><span class="line"><span class="comment">" see :h vundle for more details or wiki for FAQ</span></span><br><span class="line"><span class="comment">" Put your non-Plugin stuff after this line</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="install-Plugin"><a href="#install-Plugin" class="headerlink" title="install Plugin"></a>install Plugin</h1><p>c## Vundle</p>
-<ol>
-<li><p>download the plugin</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>add the following setting code to the <code>.vimrc</code></p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" set the runtime path to include Vundle and initialize</span></span><br><span class="line"><span class="keyword">set</span> rtp+=~/vimfiles/bundle/Vundle.<span class="keyword">vim</span>/</span><br><span class="line"><span class="comment">" let Vundle manage Vundle, required</span></span><br><span class="line"><span class="keyword">call</span> vundle#rc()</span><br><span class="line">Bundle <span class="string">'gmarik/vundle'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>using</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'plugin name'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>command</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:BundleList       - lists configured plugins</span><br><span class="line">:BundleInstall    - installs plugins; append `!` to update or just :BundleUpdate</span><br><span class="line">:BundleSearch foo - searches for foo; append `!` to refresh local cache</span><br><span class="line">:BundleClean      - confirms removal of unused plugins; append `!` to auto-approve removal</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="YouCompleteMe"><a href="#YouCompleteMe" class="headerlink" title="YouCompleteMe"></a>YouCompleteMe</h2><ol>
-<li><p>support language</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C、Objectiv-c、C<span class="comment">#、C++、Objectiv-C++、Php、Javascript、Typescript、python、Go、Rust</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'Valloric/YouCompleteMe'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>compile the plugin</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.vim/bundle/YouCompleteMe</span><br><span class="line">./install.py --clang-completer</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Taglist"><a href="#Taglist" class="headerlink" title="Taglist"></a>Taglist</h2><p>It is a plugin to jump between code</p>
-<ol>
-<li>download the <a href="http://ctags.sourceforge.net" target="_blank" rel="noopener">ctags</a></li>
-<li>unzip the ctags file to get <code>ctags.exe</code></li>
-<li>copy <code>ctags.exe</code> to the <code>vim.exe</code> installation file</li>
-<li><p>add the following code to the <code>.vimrc</code></p>
- <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set tags=tags;</span><br><span class="line"><span class="keyword">set</span> autochdir</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>install Taglist<br>add the following code to <code>.vimrc</code></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Bundle &apos;taglist.vim&apos;</span><br><span class="line">let Tlist_Ctags_Cmd=&apos;ctags&apos;</span><br><span class="line">let Tlist_Show_One_File=1</span><br><span class="line">let Tlist_WinWidt =28</span><br><span class="line">let Tlist_Exit_OnlyWindow=1</span><br><span class="line">let Tlist_Use_Left_Windo =1</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h2><p>add the following code to <code>.vimrc</code><br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Bundle <span class="string">'scrooloose/nerdtree'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinPos=<span class="string">'left'</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeWinSize=<span class="number">30</span></span><br><span class="line"><span class="keyword">let</span> NERDTreeShowHidden=<span class="number">0</span></span><br><span class="line"><span class="keyword">map</span> <span class="symbol">&lt;F2&gt;</span> :NERDTreeToggle<span class="symbol">&lt;CR&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>and this to the top of <code>.vimrc</code> to ignore some error<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> encoding=utf-<span class="number">8</span> <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> fenc=utf-<span class="number">8</span>     <span class="comment">" encoding</span></span><br><span class="line"><span class="keyword">set</span> termencoding=utf-<span class="number">8</span></span><br><span class="line"><span class="keyword">set</span> fileencoding=chinese</span><br><span class="line"><span class="keyword">set</span> fileencodings=ucs-bom,utf-<span class="number">8</span>,chinese</span><br></pre></td></tr></table></figure></p>
-<h1 id="Error-meeting-in-the-installation-process"><a href="#Error-meeting-in-the-installation-process" class="headerlink" title="Error meeting in the installation process"></a>Error meeting in the installation process</h1><ol>
-<li>Please input Enter or other key to continue<br>This is beause there is some thing wrong in the setting file <code>.vimrc</code>. fix it, and there will be fine.</li>
-<li></li>
-</ol>
+        <p>variables on the tensorflow, it’s about local, global, model and trainable veriables.<br><a id="more"></a></p>
+<h1 id="local-variables"><a href="#local-variables" class="headerlink" title="local variables"></a>local variables</h1><p>It’s a variable, but it is defined in<code>tf.GraphKeys.LOCAL_VARIABLES</code>, and you can view it by the following command. Just like it’s name, as a local variable, it will not be saved to <code>checkpoint</code> file by default.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">local_variables = tf.get_collection(tf.GraphKeys.LOCAL_VARIABLES)</span><br><span class="line">print(sess.run(local_variables))</span><br></pre></td></tr></table></figure></p>
+<p>The variable defined by default is a global variable, but you can get a local variable by the following method.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">local_variable = tf.Variable(<span class="number">6</span>, name=<span class="string">'var_l'</span>, collections=[tf.GraphKeys.LOCAL_VARIABLES])</span><br></pre></td></tr></table></figure></p>
+<p><strong>note:</strong> without any statement, the variables you get in the model and function are also global variables.</p>
+<h1 id="gloable-variables"><a href="#gloable-variables" class="headerlink" title="gloable variables"></a>gloable variables</h1><p>It’s the most common variable used in the tensorflow code, and you can get it on the function or model. they are added to the collection,<code>tf.GraphKeys.GLOBAL_VARIABLES</code>, and you can view them by the following method.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">global_variables = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)</span><br><span class="line">print(sess.run(global_variables))</span><br></pre></td></tr></table></figure></p>
+<h1 id="model-variables"><a href="#model-variables" class="headerlink" title="model variables"></a>model variables</h1><p>It’s defined inside the model, and added to the collection, <code>tf.GraphKeys.MODEL_VARIABLES)</code>. you can view them by the following command.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model_variables = tf.get_collection(tf.GraphKeys.MODEL_VARIABLES)</span><br><span class="line">print(sess.run(MODEL_variables))</span><br></pre></td></tr></table></figure></p>
+<h1 id="trainable-variables"><a href="#trainable-variables" class="headerlink" title="trainable variables"></a>trainable variables</h1><p>It’s defined inside the model. In the proces of training, it will be trained. you can find it on the collection, <code>tf.GraphKeys.TRAINABLE_VARIABLES</code>. View them by the following command.<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">trainable_variables = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)</span><br><span class="line">print(sess.run(MODEL_variables))</span><br></pre></td></tr></table></figure></p>
+<h1 id="a-example-to-understand-it"><a href="#a-example-to-understand-it" class="headerlink" title="a example to understand it"></a>a example to understand it</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">some_func</span><span class="params">()</span>:</span></span><br><span class="line">    z = tf.Variable(<span class="number">1</span>, name=<span class="string">'var_z'</span>)</span><br><span class="line"></span><br><span class="line">a = tf.Variable(<span class="number">1</span>, name=<span class="string">'var_a'</span>)</span><br><span class="line"><span class="comment"># get_variable can get a variable existed </span></span><br><span class="line"><span class="comment"># or create a variable that does't exist</span></span><br><span class="line">b = tf.get_variable(<span class="string">'var_b'</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">with</span> tf.name_scope(<span class="string">'aaa'</span>):</span><br><span class="line">    c = tf.Variable(<span class="number">3</span>, name=<span class="string">'var_c'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.variable_scope(<span class="string">'bbb'</span>):</span><br><span class="line">    d = tf.Variable(<span class="number">3</span>, name=<span class="string">'var_d'</span>)</span><br><span class="line"></span><br><span class="line">some_func()</span><br><span class="line">some_func()</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> ([str(i.name) <span class="keyword">for</span> i <span class="keyword">in</span> tf.global_variables()])</span><br><span class="line"><span class="keyword">print</span> ([str(i.name) <span class="keyword">for</span> i <span class="keyword">in</span> tf.local_variables()])</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">[<span class="string">'var_a:0'</span>, <span class="string">'var_b:0'</span>, <span class="string">'aaa/var_c:0'</span>, <span class="string">'bbb/var_d:0'</span>, <span class="string">'var_z:0'</span>, <span class="string">'var_z_1:0'</span>]</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+<p>The order in the list is the order in which variables are creted. variables in a function are only established when the function is executed, so there are two variables about <code>var_z</code></p>
 
       
     </div>
@@ -541,9 +515,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/install/" rel="tag"># install</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/Vim/" rel="tag"># Vim</a>
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
+          
+            <a href="/tags/variables/" rel="tag"># variables</a>
           
         </div>
       
@@ -556,8 +532,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/08/lua-cmd/" rel="next" title="lua-cmd">
-                <i class="fa fa-chevron-left"></i> lua-cmd
+              <a href="/2019/07/02/python-numpy/" rel="next" title="python-numpy">
+                <i class="fa fa-chevron-left"></i> python-numpy
               </a>
             
           </div>
@@ -566,8 +542,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/06/17/python-data-operation/" rel="prev" title="python-data-operation">
-                python-data-operation <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/02/tensorflow-model-save/" rel="prev" title="tensorflow-model-save">
+                tensorflow-model-save <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -637,12 +613,57 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               
@@ -704,7 +725,35 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -749,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#installation"><span class="nav-number">1.</span> <span class="nav-text">installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#set-the-setting-file-vimrc"><span class="nav-number">2.</span> <span class="nav-text">set the setting file .vimrc</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#install-Plugin"><span class="nav-number">3.</span> <span class="nav-text">install Plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#YouCompleteMe"><span class="nav-number">3.1.</span> <span class="nav-text">YouCompleteMe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Taglist"><span class="nav-number">3.2.</span> <span class="nav-text">Taglist</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NERDTree"><span class="nav-number">3.3.</span> <span class="nav-text">NERDTree</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-meeting-in-the-installation-process"><span class="nav-number">4.</span> <span class="nav-text">Error meeting in the installation process</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#local-variables"><span class="nav-text">local variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gloable-variables"><span class="nav-text">gloable variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#model-variables"><span class="nav-text">model variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#trainable-variables"><span class="nav-text">trainable variables</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#a-example-to-understand-it"><span class="nav-text">a example to understand it</span></a></li></ol></div>
             
 
           </div>
@@ -794,6 +843,14 @@
 
 
 
+
+
+  <script src="https://unpkg.com/mermaid@/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
 
         
 
@@ -1228,7 +1285,7 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1250,6 +1307,26 @@
   
 
   
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
   
 

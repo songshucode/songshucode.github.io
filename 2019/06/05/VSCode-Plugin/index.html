@@ -11,10 +11,8 @@
 
 
 
-  
 
-
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next gemini" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.9.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,7 +77,7 @@
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -101,11 +99,11 @@
 <meta name="keywords" content="VSCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VSCode-Plugin">
-<meta property="og:url" content="http://yoursite.com/2019/06/05/VSCode-Plugin/index.html">
+<meta property="og:url" content="http://192.168.0.186/2019/06/05/VSCode-Plugin/index.html">
 <meta property="og:site_name" content="Songshu">
 <meta property="og:description" content="describe the VSCode Plugin, install, settingnote: It’s working.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-10T04:20:39.972Z">
+<meta property="og:updated_time" content="2019-07-10T12:09:50.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode-Plugin">
 <meta name="twitter:description" content="describe the VSCode Plugin, install, settingnote: It’s working.">
@@ -118,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/06/05/VSCode-Plugin/">
+  <link rel="canonical" href="http://192.168.0.186/2019/06/05/VSCode-Plugin/">
 
 
 
@@ -373,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/05/VSCode-Plugin/">
+    <link itemprop="mainEntityOfPage" href="http://192.168.0.186/2019/06/05/VSCode-Plugin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Songshu Zhu">
@@ -433,11 +431,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-10 12:20:39" itemprop="dateModified" datetime="2019-06-10T12:20:39+08:00">2019-06-10</time>
+                <time title="修改时间：2019-07-10 20:09:50" itemprop="dateModified" datetime="2019-07-10T20:09:50+08:00">2019-07-10</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/VSCode/" itemprop="url" rel="index"><span itemprop="name">VSCode</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -469,14 +485,14 @@
       
         <p>describe the VSCode Plugin, install, setting<br><strong>note:</strong> It’s working.<br><a id="more"></a></p>
 <h1 id="fundamental-concept"><a href="#fundamental-concept" class="headerlink" title="fundamental concept"></a>fundamental concept</h1><p><code>task</code>: running a script once.<br><code>task.json</code>: setting file about <code>task</code>.<br><code>working space</code>: the working folder.<br><code>setting.json</code>: setting file of the working space. you can find a button on the bottom right corner, and click it you will find the setting button.<br><code>launch.json</code>: setting file of debug environment.  </p>
-<h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h2><p>Some shrotcuts for markdown editing</p>
+<h1 id="Markdown-plugin"><a href="#Markdown-plugin" class="headerlink" title="Markdown plugin"></a>Markdown plugin</h1><h2 id="Markdown-All-in-One"><a href="#Markdown-All-in-One" class="headerlink" title="Markdown All in One"></a>Markdown All in One</h2><p>Some shrotcuts for markdown editing</p>
 <h2 id="Markdown-Preview-Github-Styling"><a href="#Markdown-Preview-Github-Styling" class="headerlink" title="Markdown Preview Github Styling"></a>Markdown Preview Github Styling</h2><p>Change VSCode’s built-in markdown preview to match Github’s style</p>
 <h2 id="Markdown-Shrotcuts"><a href="#Markdown-Shrotcuts" class="headerlink" title="Markdown Shrotcuts"></a>Markdown Shrotcuts</h2><p>Some shortcuts for markdown editing</p>
-<h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>python official plugin<br><strong>setting.json</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"python.pythonPath"</span>: <span class="string">"E:/Anaconda3/envs/tf-gpu/python"</span>,</span><br><span class="line"><span class="string">"python.linting.pylintPath"</span>: <span class="string">"E:/Anaconda3/envs/tf-gpu/Scripts"</span>,</span><br></pre></td></tr></table></figure></p>
+<h1 id="python-plugin"><a href="#python-plugin" class="headerlink" title="python plugin"></a>python plugin</h1><h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>python official plugin<br><strong>setting.json</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"python.pythonPath": "E:/Anaconda3/envs/tf-gpu/python",</span><br><span class="line">"python.linting.pylintPath": "E:/Anaconda3/envs/tf-gpu/Scripts",</span><br></pre></td></tr></table></figure></p>
 <p>the first one is the<code>python.exe</code>‘s path.<br>the second one is the<code>pylint.exe</code>‘s path. It’s a code analysis tool, and you can install it by the following command:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pylint</span><br></pre></td></tr></table></figure></p>
 <p><strong>tasks.json</strong><br>run python file shortcut:<code>Ctrl+Shift+B</code><br>set the default template to create <code>tasks.json</code><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> <span class="comment"># the script to run</span></span><br><span class="line">args    <span class="comment"># the paraments set for running. using this "$&#123;file&#125;"</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>lunch.json</strong><br>click the debuf icon on the left bar, and find the setting button on the top bar.<br>now, it’s time for you to debug you code.</p>
-<h2 id="Visual-Studio-IntelliCode"><a href="#Visual-Studio-IntelliCode" class="headerlink" title="Visual Studio IntelliCode"></a>Visual Studio IntelliCode</h2><p>Code completion automatically<br><strong>setting.json</strong><br>add the following command to the setting file.<br>``` bash<br>“python.autoComplete.extraPaths”: [<br>    “E:/Anaconda3/envs/tf-gpu”,<br>    “E:/Anaconda3/envs/tf-gpu/Lib”,<br>    “E:/Anaconda3/envs/tf-gpu/Lib/site-packages”,<br>    “E:/Anaconda3/envs/tf-gpu/DLLs”<br>]</p>
+<p><strong>lunch.json</strong><br>click the debug icon on the left bar, and find the setting button on the top bar.<br>now, it’s time for you to debug you code.</p>
+<h2 id="Visual-Studio-IntelliCode"><a href="#Visual-Studio-IntelliCode" class="headerlink" title="Visual Studio IntelliCode"></a>Visual Studio IntelliCode</h2><p>Code completion automatically<br><strong>setting.json</strong><br>add the following command to the setting file.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"python.autoComplete.extraPaths"</span>: [</span><br><span class="line">    <span class="string">"E:/Anaconda3/envs/tf-gpu"</span>,</span><br><span class="line">    <span class="string">"E:/Anaconda3/envs/tf-gpu/Lib"</span>,</span><br><span class="line">    <span class="string">"E:/Anaconda3/envs/tf-gpu/Lib/site-packages"</span>,</span><br><span class="line">    <span class="string">"E:/Anaconda3/envs/tf-gpu/DLLs"</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -594,12 +610,57 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
               
 
               
@@ -661,7 +722,35 @@
                     
                       
                     
-                    <span class="site-state-item-count">18</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -706,7 +795,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fundamental-concept"><span class="nav-number">1.</span> <span class="nav-text">fundamental concept</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown"><span class="nav-number">2.</span> <span class="nav-text">Markdown</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-All-in-One"><span class="nav-number">2.1.</span> <span class="nav-text">Markdown All in One</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-Preview-Github-Styling"><span class="nav-number">2.2.</span> <span class="nav-text">Markdown Preview Github Styling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-Shrotcuts"><span class="nav-number">2.3.</span> <span class="nav-text">Markdown Shrotcuts</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python"><span class="nav-number">3.</span> <span class="nav-text">python</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python"><span class="nav-number">3.1.</span> <span class="nav-text">Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visual-Studio-IntelliCode"><span class="nav-number">3.2.</span> <span class="nav-text">Visual Studio IntelliCode</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#fundamental-concept"><span class="nav-text">fundamental concept</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Markdown-plugin"><span class="nav-text">Markdown plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-All-in-One"><span class="nav-text">Markdown All in One</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-Preview-Github-Styling"><span class="nav-text">Markdown Preview Github Styling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-Shrotcuts"><span class="nav-text">Markdown Shrotcuts</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#python-plugin"><span class="nav-text">python plugin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python"><span class="nav-text">Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visual-Studio-IntelliCode"><span class="nav-text">Visual Studio IntelliCode</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -751,6 +840,14 @@
 
 
 
+
+
+  <script src="https://unpkg.com/mermaid@/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize("");
+    }
+  </script>
 
         
 
@@ -1185,7 +1282,7 @@
         onPopupClose();
       }
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1207,6 +1304,26 @@
   
 
   
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 
   
 
